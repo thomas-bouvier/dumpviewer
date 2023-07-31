@@ -8,8 +8,8 @@ if [ ! -f $1 ]; then
   exit 1
 fi
 
-docker-compose up -d
+sudo docker-compose up -d
 
 ./upload "$1"
 
-open "http://localhost:9980/index.php?route=/database/sql&db=dump"
+xdg-open "http://localhost:9980/index.php?route=/database/sql&db=dump"
